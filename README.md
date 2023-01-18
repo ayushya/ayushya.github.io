@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
+# Personal Website
 
-You can use the [editor on GitHub](https://github.com/ayushya/ayushya.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+See: [ayushya.github.io](https://ayushya.github.io).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+My personal website. An [MIT](https://github.com/ayushya/ayushya.github.io/blob/main/LICENSE) licensed, simple, easily modifiable, statically-exportable [React](https://reactjs.org/), [Jamstack](https://jamstack.org/) application that deploys automatically for free using [github pages](https://pages.github.com/). Built using modern javascript, based on [create-react-app](https://github.com/facebook/create-react-app) with [React-Router](https://reactrouter.com/), SCSS, [github actions](https://github.com/features/actions), and many other useful technologies.
 
-### Markdown
+## Dependencies
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Tested with: [node](https://nodejs.org/) >= v14 and optional [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) for managing node versions.
 
-```markdown
-Syntax highlighted code block
+## Set up
 
-# Header 1
-## Header 2
-### Header 3
+To download the repository and install dependencies, run the following commands:
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+git clone git://github.com/ayushya/ayushya.github.io.git
+cd personal-site
+nvm install # this is optional - make sure you're running >= node 14 with `node --version`
+npm install
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Running
 
-### Jekyll Themes
+Run the following command to build the react application and serve it with fast refresh:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ayushya/ayushya.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```bash
+npm start
+```
 
-### Support or Contact
+Your web browser should automatically open to `<ip>:<port>:<path>` default: [http://localhost:3000/](http://localhost:3000/).
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Deploying
+
+### Deploying to Github Pages
+
+1. Modify the environmental variables and git remote url in [`.github/workflows/github-pages.yml`](.github/workflows/github-pages.yml).
+2. Modify `homepage` in `package.json` to point to where you plan to host your site. If you do not plan on using a custom domain name, it should look like `https://[your-gh-username].github.io/[repository-name - default:personal-site]/`
+3. If you plan on using a custom domain, modify `public/CNAME`. If you don't, delete `public/CNAME`.
+
+Make a commit to `main` and push your changes. That's it.
+
+### Static Export
+
+To statically export the site without deploying to github pages, delete or disable `.github/workflows/github-pages.yml` and run `npm run predeploy`. This generates a static export of the website as `personal-site/build/`. Copy this and self-host or deploy to a CDN.
