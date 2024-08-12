@@ -1,13 +1,12 @@
 
 # Intro
 
-I am a full-stack engineer specializing in engineering end-to-end products, with pixel-perfect UI/UX using React/Angular Single-page application (SPA).
-I have around 7 years of experience in architecting Scalable, Performant, Maintainable, Reusable, and Testable Web Applications. I have also mentored
-10+ engineers at Instamojo.
+I am a highly skilled full-stack engineer with over 9 years of experience in architecting and developing scalable, high-performance web applications. I specialize in delivering pixel-perfect UI/UX through the implementation of React and Angular-based single-page applications (SPAs). My work is characterized by a strong emphasis on maintainability, reusability, and rigorous testing practices. Additionally, I have successfully mentored and developed the careers of over 10 engineers at Instamojo, contributing to a culture of excellence and continuous improvement.
 
 # I like
 
 - Cycling
 - Swimming
+- Trekking
 - Travelling
 

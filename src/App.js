@@ -1,7 +1,17 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Main from './layouts/Main'; // fallback for lazy pages
 import './static/css/main.scss'; // All of our styles
+
+import React, {
+  lazy,
+  Suspense,
+} from 'react';
+
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+} from 'react-router-dom';
+
+import Main from './layouts/Main'; // fallback for lazy pages
 
 const { PUBLIC_URL } = process.env;
 
@@ -20,8 +30,8 @@ const App = () => (
   <BrowserRouter basename={PUBLIC_URL}>
     <Suspense fallback={<Main />}>
       <Switch>
-        <Route exact path="/" component={Index} />
-        <Route path="/about" component={About} />
+        <Route exact path="/" component={About} />
+        <Route path="/about" component={Index} />
         <Route path="/projects" component={Projects} />
         <Route path="/stats" component={Stats} />
         <Route path="/contact" component={Contact} />
